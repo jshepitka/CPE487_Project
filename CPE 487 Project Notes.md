@@ -29,7 +29,7 @@ shared variable datacur    : std_logic_vector(7 downto 0);
 
 [StackExchange STD_LOGIC vs BIT](https://electronics.stackexchange.com/questions/51848/when-to-use-std-logic-over-bit-in-vhdl)
 
-[<= is used to assign value to variable (=> is used for case statements)](https://stackoverflow.com/questions/7988098/vhdl-difference-between-and)
+[<= is used to assign value to signal (=> is used for case statements)](https://stackoverflow.com/questions/7988098/vhdl-difference-between-and)
 ```
 variable x : std_logic := 0;
 ```
