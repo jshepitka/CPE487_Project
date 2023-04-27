@@ -1,0 +1,334 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 375.359 ; gain = 61.469
+Command: read_checkpoint -auto_incremental -incremental C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19324
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1203.977 ; gain = 408.707
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/top.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'PS2Receiver' [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/PS2Receiver.vhd:14]
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/debouncer.vhd:5' bound to instance 'debounce_inst' of component 'debouncer' [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/PS2Receiver.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/debouncer.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (0#1) [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/debouncer.vhd:15]
+WARNING: [Synth 8-614] signal 'kdataf' is read in the process but is not in the sensitivity list [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/PS2Receiver.vhd:43]
+WARNING: [Synth 8-614] signal 'keycode' is read in the process but is not in the sensitivity list [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/PS2Receiver.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'PS2Receiver' (0#1) [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/PS2Receiver.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'seg7decimal' [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/Seg_7_Display.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'seg7decimal' (0#1) [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/Seg_7_Display.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/top.vhd:16]
+WARNING: [Synth 8-3848] Net out0 in module/entity debouncer does not have driver. [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/debouncer.vhd:19]
+WARNING: [Synth 8-3848] Net out1 in module/entity debouncer does not have driver. [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/debouncer.vhd:19]
+WARNING: [Synth 8-3848] Net digit in module/entity seg7decimal does not have driver. [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/Seg_7_Display.vhd:18]
+WARNING: [Synth 8-3848] Net UART_TXD in module/entity top does not have driver. [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/top.vhd:12]
+WARNING: [Synth 8-7129] Port x[31] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[30] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[29] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[28] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[27] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[26] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[25] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[24] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[23] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[22] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[21] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[20] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[19] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[18] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[17] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[16] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[15] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[14] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[13] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[12] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[11] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[10] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[9] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[8] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[7] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[6] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[5] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[4] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[3] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[2] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[1] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port x[0] in module seg7decimal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port UART_TXD in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1294.605 ; gain = 499.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1294.605 ; gain = 499.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1294.605 ; gain = 499.336
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1294.605 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1388.582 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1388.582 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'keycode_reg' [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/PS2Receiver.vhd:83]
+WARNING: [Synth 8-327] inferring latch for variable 'datacur_reg' [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/PS2Receiver.vhd:49]
+WARNING: [Synth 8-327] inferring latch for variable 'dataprev_reg' [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/PS2Receiver.vhd:82]
+WARNING: [Synth 8-327] inferring latch for variable 'cnt_reg' [C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/sources_1/new/PS2Receiver.vhd:45]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 1     
+	  11 Input    7 Bit        Muxes := 1     
+	  17 Input    7 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design top has port DP driven by constant 1
+WARNING: [Synth 8-7129] Port UART_TXD in module top is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[31]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[30]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[28]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[27]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[26]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[25]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[24]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[23]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[22]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[21]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[20]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[19]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[18]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[17]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[16]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/keycode_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/datacur_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/datacur_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/datacur_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/datacur_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/datacur_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/datacur_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/datacur_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/datacur_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/dataprev_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/dataprev_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/dataprev_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/dataprev_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/dataprev_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/dataprev_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/dataprev_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/dataprev_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/cnt_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/cnt_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/cnt_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PS2Receiver_inst/cnt_reg[0]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT1   |     1|
+|4     |LUT3   |     8|
+|5     |FDRE   |    20|
+|6     |IBUF   |     1|
+|7     |OBUF   |    16|
+|8     |OBUFT  |     1|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1388.582 ; gain = 593.312
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 59 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:44 . Memory (MB): peak = 1388.582 ; gain = 499.336
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1388.582 ; gain = 593.312
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1388.582 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1388.582 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 2dab5441
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 98 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1388.582 ; gain = 988.375
+INFO: [Common 17-1381] The checkpoint 'C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 25 13:42:50 2023...

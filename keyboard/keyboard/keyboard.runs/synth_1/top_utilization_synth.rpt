@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Thu Apr 27 02:05:44 2023
-| Host         : Johnny-Desktop running 64-bit major release  (build 9200)
+| Date         : Thu Apr 27 13:19:59 2023
+| Host         : JOHNNY-LAPTOP running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
 | Device       : xc7a100tcsg324-1
@@ -34,8 +34,8 @@ Table of Contents
 | Slice LUTs*             |   48 |     0 |          0 |     63400 |  0.08 |
 |   LUT as Logic          |   48 |     0 |          0 |     63400 |  0.08 |
 |   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
-| Slice Registers         |   84 |     0 |          0 |    126800 |  0.07 |
-|   Register as Flip Flop |   84 |     0 |          0 |    126800 |  0.07 |
+| Slice Registers         |   91 |     0 |          0 |    126800 |  0.07 |
+|   Register as Flip Flop |   91 |     0 |          0 |    126800 |  0.07 |
 |   Register as Latch     |    0 |     0 |          0 |    126800 |  0.00 |
 | F7 Muxes                |    4 |     0 |          0 |     31700 |  0.01 |
 | F8 Muxes                |    0 |     0 |          0 |     15850 |  0.00 |
@@ -59,7 +59,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 84    |          Yes |       Reset |            - |
+| 91    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,7 +148,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   84 |        Flop & Latch |
+| FDRE     |   91 |        Flop & Latch |
 | LUT6     |   25 |                 LUT |
 | OBUF     |   16 |                  IO |
 | LUT4     |   11 |                 LUT |
