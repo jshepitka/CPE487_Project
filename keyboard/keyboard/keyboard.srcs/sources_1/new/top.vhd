@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
-
+use ieee.std_logic_unsigned.all;
 entity top is
     port(
         CLK100MHZ : in std_logic;
@@ -18,8 +18,7 @@ architecture Behavioral of top is
     signal keycode  : std_logic_vector(31 downto 0);
 
 begin
-
-    PS2Receiver_inst : entity work.PS2Receiver
+    keyboard : entity work.PS2Receiver
     port map (
         clk         => CLK50MHZ,
         kclk        => PS2_CLK,
@@ -27,7 +26,7 @@ begin
         keycodeout  => keycode(31 downto 0)
     );
 
-    seg7decimal_inst : entity work.seg7decimal
+    sevenSeg : entity work.seg7decimal
     port map (
         x    => keycode(31 downto 0),
         clk  => CLK100MHZ,

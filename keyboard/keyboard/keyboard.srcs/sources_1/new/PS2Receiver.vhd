@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+--use ieee.std_logic_unsigned.all;
 
 entity PS2Receiver is
     Port (
@@ -22,12 +23,11 @@ architecture Behavioral of PS2Receiver is
         );
     end component;
 
-    signal kclkf, kdataf: std_logic;
+    signal kclkf, kdataf, flag: std_logic;
     signal datacur    : std_logic_vector(7 downto 0);
     signal dataprev   : std_logic_vector(7 downto 0);
     signal cnt        : std_logic_vector(3 downto 0);
     signal keycode    : std_logic_vector(31 downto 0);
-    signal flag       : std_logic;
 
 begin
 
@@ -40,10 +40,11 @@ begin
         O1  => kdataf
     );
 
-    process(kclkf, cnt)
+    process(kclkf)
     begin
+    if falling_edge(kclkf) then
         case cnt is
-            when "0000" => -- Start bit
+            when "0000" =>
                 null;
             when "0001" =>
                 datacur(0) <= kdataf;
@@ -74,11 +75,12 @@ begin
         elsif cnt = "1010" then
             cnt <= "0000";
         end if;
-
+    end if;
     end process;
 
-    process(flag, dataprev, datacur)
+    process(flag)
     begin
+    if rising_edge(flag) then
         if dataprev /= datacur then
             keycode(31 downto 24) <= keycode(23 downto 16);
             keycode(23 downto 16) <= keycode(15 downto 8);
@@ -86,8 +88,8 @@ begin
             keycode(7 downto 0)  <= datacur;
             dataprev <= datacur;
         end if;
+    end if;
     end process;
 
     keycodeout <= keycode;
-
 end Behavioral;

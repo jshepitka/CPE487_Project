@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-
+use ieee.std_logic_unsigned.all;
 entity debouncer is
     Port (
         clk  : in  std_logic;
@@ -14,13 +14,13 @@ end debouncer;
 
 architecture Behavioral of debouncer is
 
-    signal cnt0, cnt1 : std_logic_vector(4 downto 0);
-    signal Iv0, Iv1 : std_logic;
+    signal cnt0, cnt1 : std_logic_vector (4 downto 0);
+    signal Iv0, Iv1 : std_logic := '0';
     signal out0, out1 : std_logic;
 
 begin
-
-    process(clk) begin
+    process(clk) 
+        begin
         if rising_edge(clk) then
             if (I0=Iv0) then
                 if cnt0="10011" then
@@ -45,8 +45,4 @@ begin
             end if;
         end if;
     end process;
-
-    O0 <= out0;
-    O1 <= out1;
-    
 end Behavioral;
