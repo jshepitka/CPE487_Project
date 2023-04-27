@@ -17,7 +17,7 @@ architecture Behavioral of seg7decimal is
     signal s    : std_logic_vector(2 downto 0);
     signal aen  : std_logic_vector(7 downto 0);
     
-    signal digit: std_logic_vector(3 downto 0);
+    
     signal clkdiv: std_logic_vector(19 downto 0);
 
 begin
@@ -29,27 +29,28 @@ begin
         -- Decoder for 7-segment display values
 
     process(clk)
+        variable digit: std_logic_vector(3 downto 0);
     begin
     if rising_edge(clk) then
         case s is
             when "000" =>
-                    digit <= x(3 downto 0);
+                    digit := x(3 downto 0);
                 when "001" =>
-                    digit <= x(7 downto 4);
+                    digit := x(7 downto 4);
                 when "010" =>
-                    digit <= x(11 downto 8); 
+                    digit := x(11 downto 8); 
                 when "011" =>
-                    digit <= x(15 downto 12);    
+                    digit := x(15 downto 12);    
                 when "100" =>
-                    digit <= x(19 downto 16);
+                    digit := x(19 downto 16);
                 when "101" =>
-                    digit <= x(23 downto 20);    
+                    digit := x(23 downto 20);    
                 when "110" =>
-                    digit <= x(27 downto 24);
+                    digit := x(27 downto 24);
                 when "111" =>
-                    digit <= x(31 downto 28);
+                    digit := x(31 downto 28);
                 when others =>
-                    digit <= x(3 downto 0);
+                    digit := x(3 downto 0);
                 end case;      
         end if;
         case digit is
