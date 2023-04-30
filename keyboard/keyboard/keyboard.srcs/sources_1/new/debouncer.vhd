@@ -15,12 +15,14 @@ end debouncer;
 architecture Behavioral of debouncer is
 
     signal cnt0, cnt1 : std_logic_vector (4 downto 0);
-    signal Iv0, Iv1 : std_logic := '0';
+    signal Iv0, Iv1 : std_logic;
     signal out0, out1 : std_logic;
 
 begin
     process(clk) 
         begin
+            Iv0 <= '0';
+            Iv1 <= '0';
         if rising_edge(clk) then
             if (I0=Iv0) then
                 if cnt0="10011" then

@@ -1,0 +1,909 @@
+/*
+
+Xilinx Vivado v2022.2 (64-bit) [Major: 2022, Minor: 2]
+SW Build: 3671981 on Fri Oct 14 05:00:03 MDT 2022
+IP Build: 3669848 on Fri Oct 14 08:30:02 MDT 2022
+
+Process ID (PID): 25904
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Apr 27 11:54:32 EDT 2023
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	C:/Xilinx/Vivado/2022.2/tps/win64/jre11.0.11_9
+Java executable: 	C:/Xilinx/Vivado/2022.2/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	johnn
+User home directory: C:/Users/johnn
+User working directory: C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2022.2
+RDI_DATADIR: C:/Xilinx/Vivado/2022.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2022.2/bin
+
+Vivado preferences file: C:/Users/johnn/AppData/Roaming/Xilinx/Vivado/2022.2/vivado.xml
+Vivado preferences directory: C:/Users/johnn/AppData/Roaming/Xilinx/Vivado/2022.2/
+Vivado layouts directory: C:/Users/johnn/AppData/Roaming/Xilinx/Vivado/2022.2/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2022.2/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/vivado.log
+Vivado journal file: 	C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/vivado.jou
+Engine tmp dir: 	C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/.Xil/Vivado-25904-JOHNNY-LAPTOP
+
+Xilinx Environment Variables
+----------------------------
+JAVA_HOME: C:\Java\jdk-18.0.1.1
+RDI_APPROOT: C:/Xilinx/Vivado/2022.2
+RDI_ARGS:  -gui_launcher_event rodinguilauncherevent21804 "C:\Users\johnn\Documents\.Documents\CPE487_Project\keyboard\keyboard\keyboard.xpr"
+RDI_ARGS_FUNCTION: RDI_EXEC_DEFAULT
+RDI_BASEROOT: C:/Xilinx/Vivado
+RDI_BINDIR: C:/Xilinx/Vivado/2022.2/bin
+RDI_BINROOT: C:/Xilinx/Vivado/2022.2/bin
+RDI_BUILD: yes
+RDI_CHECK_PROG: True
+RDI_DATADIR: C:/Xilinx/Vivado/2022.2/data
+RDI_INSTALLROOT: C:/Xilinx
+RDI_INSTALLVER: 2022.2
+RDI_INSTALLVERSION: 2022.2
+RDI_ISE_PLATFORM: nt64
+RDI_JAVACEFROOT: C:/Xilinx/Vivado/2022.2/tps/win64/java-cef-95.0.4638.69
+RDI_JAVAFXROOT: C:/Xilinx/Vivado/2022.2/tps/win64/javafx-sdk-11.0.2
+RDI_JAVAROOT: C:/Xilinx/Vivado/2022.2/tps/win64/jre11.0.11_9
+RDI_JAVA_VERSION: 11.0.11_9
+RDI_LIBDIR: C:/Xilinx/Vivado/2022.2/lib/win64.o
+RDI_MINGW_LIB: C:/Xilinx/Vivado/2022.2\tps\mingw\6.2.0\win64.o\nt\bin;C:/Xilinx/Vivado/2022.2\tps\mingw\6.2.0\win64.o\nt\libexec\gcc\x86_64-w64-mingw32\6.2.0
+RDI_OPT_EXT: .o
+RDI_PLATFORM: win64
+RDI_PREPEND_PATH: C:/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2022.2/ids_lite/ISE/lib/nt64
+RDI_PROG: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/vivado.exe
+RDI_PROGNAME: vivado.exe
+RDI_PYTHON3: C:/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3
+RDI_PYTHON3_VERSION: 3.8.3
+RDI_PYTHONHOME: C:/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3
+RDI_PYTHONPATH: C:/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3;C:/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3\bin;C:/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3\lib;C:/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3\lib\site-packages
+RDI_PYTHON_LD_LIBPATH: C:/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3\lib
+RDI_TPS_ROOT: C:/Xilinx/Vivado/2022.2/tps/win64
+RDI_USE_JDK11: True
+RDI_VERBOSE: False
+XILINX: C:/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2022.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2022.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2022.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2022.2
+_RDI_BINROOT: C:\Xilinx\Vivado\2022.2\bin
+_RDI_CWD: C:\Users\johnn\Documents\.Documents\CPE487_Project\keyboard\keyboard
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 635 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\johnn\Documents\.Documents\CPE487_Project\keyboard\keyboard\keyboard.xpr. Version: Vivado v2022.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 635 MB. GUI used memory: 58 MB. Current time: 4/27/23, 11:54:33 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 827 MB. GUI used memory: 56 MB. Current time: 4/27/23, 11:54:48 AM EDT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/keyboard/keyboard' since last save. INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 72 MB (+72697kb) [00:00:42]
+// [Engine Memory]: 920 MB (+813316kb) [00:00:42]
+// WARNING: HEventQueue.dispatchEvent() is taking  6138 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'. 
+// [GUI Memory]: 85 MB (+10320kb) [00:00:47]
+// Tcl Message: open_project: Time (s): cpu = 00:01:05 ; elapsed = 00:00:31 . Memory (MB): peak = 1081.777 ; gain = 329.289 
+// Project name: keyboard; location: C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bq
+// [GUI Memory]: 104 MB (+14848kb) [00:00:49]
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 111 MB (+2193kb) [00:00:51]
+// Elapsed time: 83 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+// HMemoryUtils.trashcanNow. Engine heap size: 958 MB. GUI used memory: 62 MB. Current time: 4/27/23, 11:56:48 AM EDT
+// Elapsed time: 24 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1); // D
+// PAPropertyPanels.initPanels (PS2Receiver.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), keyboard : PS2Receiver(Behavioral) (PS2Receiver.vhd)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), keyboard : PS2Receiver(Behavioral) (PS2Receiver.vhd)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// [Engine Memory]: 971 MB (+4634kb) [00:02:38]
+// [GUI Memory]: 117 MB (+204kb) [00:04:13]
+// Elapsed time: 145 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), sevenSeg : seg7decimal(Behavioral) (Seg_7_Display.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), sevenSeg : seg7decimal(Behavioral) (Seg_7_Display.vhd)]", 4, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 63 seconds
+selectCodeEditor("Seg_7_Display.vhd", 273, 173); // ac
+// Elapsed time: 204 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 5); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraints.xdc]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraints.xdc]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraints.xdc]", 7, false, false, false, false, false, true); // D - Double Click
+selectButton(PAResourceOtoP.OpenFileAction_OK, "OK"); // a
+dismissDialog("Unable to Open File"); // Q.a
+// Elapsed time: 90 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraints.xdc]", 7, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_REPLACE_FILE, "Replace File..."); // ao
+// Run Command: PAResourceCommand.PACommandNames_SRC_REPLACE_FILE
+dismissFileChooser();
+// 'dw' command handler elapsed time: 8 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraints.xdc]", 7, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ao
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/constrs_1/new/constraints.xdc] -no_script -reset -force -quiet 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset constrs_1 C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/constrs_1/new/constraints.xdc 
+// HMemoryUtils.trashcanNow. Engine heap size: 980 MB. GUI used memory: 66 MB. Current time: 4/27/23, 12:05:43 PM EDT
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6, false, false, false, false, true, false); // D - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 5, true); // D - Node
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_CREATE_FILE, "Create File"); // a
+// Tcl Command: 'file mkdir C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/constrs_1'
+// Tcl Message: file mkdir C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/constrs_1 
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "constraints", true); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Constraints File"); // u
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 15 seconds
+// Tcl Command: 'file mkdir C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/constrs_1/new'
+dismissDialog("Add Sources"); // c
+// Tcl Message: file mkdir C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/constrs_1/new 
+// Tcl Message: close [ open C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/constrs_1/new/constraints.xdc w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/constrs_1/new/constraints.xdc 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraints.xdc]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraints.xdc]", 7, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("constraints.xdc", 100, 139); // ac
+typeControlKey((HResource) null, "constraints.xdc", 'v'); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,009 MB. GUI used memory: 68 MB. Current time: 4/27/23, 12:06:33 PM EDT
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("constraints.xdc", 266, 129); // ac
+// Elapsed time: 16 seconds
+selectCodeEditor("constraints.xdc", 2, 134); // ac
+selectCodeEditor("constraints.xdc", 195, 158); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Seg_7_Display.vhd", 2); // o
+// [GUI Memory]: 124 MB (+1128kb) [00:13:23]
+// Elapsed time: 36 seconds
+selectCodeEditor("Seg_7_Display.vhd", 370, 107); // ac
+selectCodeEditor("Seg_7_Display.vhd", 370, 107, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("Seg_7_Display.vhd", 370, 107); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 44 seconds
+selectCodeEditor("Seg_7_Display.vhd", 275, 393); // ac
+// Elapsed time: 90 seconds
+selectCodeEditor("Seg_7_Display.vhd", 49, 272); // ac
+// Elapsed time: 113 seconds
+selectCodeEditor("Seg_7_Display.vhd", 236, 82); // ac
+selectCodeEditor("Seg_7_Display.vhd", 372, 427); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'c'); // ac
+selectCodeEditor("Seg_7_Display.vhd", 119, 439, false, true, false, false, false); // ac - Control Key
+selectCodeEditor("Seg_7_Display.vhd", 373, 433); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'c'); // ac
+selectCodeEditor("Seg_7_Display.vhd", 54, 436); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Seg_7_Display.vhd", 234, 78); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 54 seconds
+selectCodeEditor("Seg_7_Display.vhd", 174, 138); // ac
+// Elapsed time: 19 seconds
+selectCodeEditor("Seg_7_Display.vhd", 230, 196); // ac
+// Elapsed time: 52 seconds
+selectCodeEditor("Seg_7_Display.vhd", 308, 202); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Seg_7_Display.vhd", 308, 202); // ac
+selectCodeEditor("Seg_7_Display.vhd", 92, 339); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+selectCodeEditor("Seg_7_Display.vhd", 22, 331); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Seg_7_Display.vhd", 339, 231); // ac
+selectCodeEditor("Seg_7_Display.vhd", 287, 81); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Seg_7_Display.vhd", 259, 270); // ac
+// Elapsed time: 37 seconds
+selectCodeEditor("Seg_7_Display.vhd", 164, 238); // ac
+selectCodeEditor("Seg_7_Display.vhd", 262, 289); // ac
+selectCodeEditor("Seg_7_Display.vhd", 187, 236); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 28 seconds
+selectCodeEditor("Seg_7_Display.vhd", 357, 81); // ac
+// Elapsed time: 197 seconds
+selectCodeEditor("Seg_7_Display.vhd", 105, 352); // ac
+selectCodeEditor("Seg_7_Display.vhd", 133, 153); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("Seg_7_Display.vhd", 133, 153); // ac
+selectCodeEditor("Seg_7_Display.vhd", 307, 202); // ac
+selectCodeEditor("Seg_7_Display.vhd", 78, 258); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 162 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton("OptionPane.button", "Cancel"); // JButton
+// Elapsed time: 53 seconds
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aa
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "set_param general.maxThreads 8", true); // h.a
+// Tcl Command: 'set_param general.maxThreads 8'
+// Tcl Command: 'set_param general.maxThreads 8'
+// Tcl Message: set_param general.maxThreads 8 
+// Tcl Message: 8 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton("OptionPane.button", "OK"); // JButton
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/synth_1/top.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Apr 27 12:23:08 2023] Launched synth_1... Run output will be captured here: C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/synth_1/runme.log 
+// 'i' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 169 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// Elapsed time: 35 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: [Thu Apr 27 12:26:34 2023] Launched impl_1... Run output will be captured here: C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/impl_1/runme.log 
+// 'a' command handler elapsed time: 36 seconds
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+selectCodeEditor("Seg_7_Display.vhd", 168, 175); // ac
+selectCodeEditor("Seg_7_Display.vhd", 220, 179); // ac
+selectCodeEditor("Seg_7_Display.vhd", 226, 177); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("Seg_7_Display.vhd", 104, 317, false, false, false, true, false); // ac - Popup Trigger
+selectCodeEditor("Seg_7_Display.vhd", 45, 315); // ac
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 15 seconds
+selectCodeEditor("Seg_7_Display.vhd", 138, 243); // ac
+selectCodeEditor("Seg_7_Display.vhd", 133, 269); // ac
+// Elapsed time: 39 seconds
+selectCodeEditor("Seg_7_Display.vhd", 224, 312); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("Seg_7_Display.vhd", 223, 347); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Seg_7_Display.vhd", 223, 388); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'c'); // ac
+selectCodeEditor("Seg_7_Display.vhd", 222, 420); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+typeControlKey(null, null, 'z');
+selectCodeEditor("Seg_7_Display.vhd", 225, 418); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("Seg_7_Display.vhd", 227, 450); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 16 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Implementation Completed"); // S.a
+selectCodeEditor("Seg_7_Display.vhd", 223, 451); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 34 seconds
+selectCodeEditor("Seg_7_Display.vhd", 197, 453); // ac
+// Elapsed time: 21 seconds
+selectCodeEditor("Seg_7_Display.vhd", 222, 183); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 61 seconds
+selectCodeEditor("Seg_7_Display.vhd", 226, 211); // ac
+// Elapsed time: 63 seconds
+selectCodeEditor("Seg_7_Display.vhd", 218, 250); // ac
+// Elapsed time: 68 seconds
+selectCodeEditor("Seg_7_Display.vhd", 283, 108); // ac
+// [GUI Memory]: 130 MB (+572kb) [00:39:23]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 99 seconds
+selectCodeEditor("Seg_7_Display.vhd", 237, 208); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'c'); // ac
+selectCodeEditor("Seg_7_Display.vhd", 279, 243); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,018 MB. GUI used memory: 72 MB. Current time: 4/27/23, 12:36:34 PM EDT
+// Elapsed time: 103 seconds
+selectCodeEditor("Seg_7_Display.vhd", 152, 303); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 129 seconds
+selectCodeEditor("Seg_7_Display.vhd", 170, 418); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 19 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 56 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PS2Receiver.vhd", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Seg_7_Display.vhd", 2); // o
+// Elapsed time: 82 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // h.a
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 167 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // u
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/synth_1/top.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+// 'i' command handler elapsed time: 9 seconds
+dismissDialog("Launch Runs"); // f
+// Tcl Command: ''
+// Elapsed time: 50 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "set_param general.maxThreads 8", true); // h.a
+// Tcl Command: 'set_param general.maxThreads 8'
+// Tcl Command: 'set_param general.maxThreads 8'
+// Tcl Message: set_param general.maxThreads 8 
+// Tcl Message: 8 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectComboBox(PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS, "8", 7); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Thu Apr 27 12:45:42 2023] Launched synth_1... Run output will be captured here: C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/synth_1/runme.log 
+// 'i' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 39 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // S.a
+selectCodeEditor("Seg_7_Display.vhd", 158, 215); // ac
+// Elapsed time: 37 seconds
+selectCodeEditor("Seg_7_Display.vhd", 213, 82); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("Seg_7_Display.vhd", 205, 144); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Thu Apr 27 12:47:40 2023] Launched synth_1... Run output will be captured here: C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 139 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectComboBox(PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS, "10", 9); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 10 
+// Tcl Message: [Thu Apr 27 12:50:03 2023] Launched impl_1... Run output will be captured here: C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/impl_1/runme.log 
+// 'a' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 94 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // cz
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 10 
+// Tcl Message: [Thu Apr 27 12:51:42 2023] Launched impl_1... Run output will be captured here: C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 75 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // t
+dismissDialog("Open Hardware Manager"); // bq
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // g
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ao
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2022.2   **** Build date : Oct 14 2022 at 05:18:10     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0 INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2022.2.0   ****** Build date   : Oct 04 2022-19:25:37     **** Build number : 2022.2.1664925937       ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1182.766 ; gain = 16.605 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  7143 ms.
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AD36FFA 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,743 MB. GUI used memory: 124 MB. Current time: 4/27/23, 12:53:14 PM EDT
+// Tcl Message: open_hw_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3349.148 ; gain = 2166.383 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0). 
+// Elapsed time: 13 seconds
+dismissDialog("Auto Connect"); // bq
+// [Engine Memory]: 2,745 MB (+1809635kb) [00:59:01]
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // aP
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'D' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bq
+// HMemoryUtils.trashcanNow. Engine heap size: 2,782 MB. GUI used memory: 73 MB. Current time: 4/27/23, 12:53:39 PM EDT
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Seg_7_Display.vhd", 1); // o
+// Elapsed time: 93 seconds
+selectCodeEditor("Seg_7_Display.vhd", 208, 78); // ac
+selectCodeEditor("Seg_7_Display.vhd", 223, 77); // ac
+selectCodeEditor("Seg_7_Display.vhd", 214, 77); // ac
+// Elapsed time: 95 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // f
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("CANCEL", "Cancel"); // JButton
+dismissDialog("Add Sources"); // c
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PS2Receiver.vhd", 0); // o
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, null, -1, null, -1, false, false, false, false, true, false); // m - Popup Trigger
+// PAResourceOtoP.PAViews_HARDWARE: Hardware: close view
+// Elapsed time: 14 seconds
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // g
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "General", 0); // g
+setText(PAResourceEtoH.HardwareDevicePropPanels_SPECIFY_BITSTREAM_FILE, "C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/impl_1/top.bit"); // L
+typeControlKey(null, null, 'z');
+// Elapsed time: 352 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Seg_7_Display.vhd", 1); // o
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 62 seconds
+selectCodeEditor("Seg_7_Display.vhd", 215, 244); // ac
+// Elapsed time: 112 seconds
+selectCodeEditor("Seg_7_Display.vhd", 175, 82); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 112 seconds
+selectCodeEditor("Seg_7_Display.vhd", 218, 469); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("Seg_7_Display.vhd", 271, 116); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PS2Receiver.vhd", 0); // o
+selectTab((HResource) null, (String) null, (HResource) null, "Hardware Device Properties", 0, true, false); // aa - Popup Trigger
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ag
+selectMenuItem(PAResourceCommand.PACommandNames_FILESET_WINDOW, "Sources"); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ag
+// Run Command: PAResourceCommand.PACommandNames_FILESET_WINDOW
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), keyboard : PS2Receiver(Behavioral) (PS2Receiver.vhd)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 35 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Seg_7_Display.vhd", 1); // o
+// Elapsed time: 136 seconds
+selectCodeEditor("Seg_7_Display.vhd", 112, 230); // ac
+selectCodeEditor("Seg_7_Display.vhd", 177, 333); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Seg_7_Display.vhd", 50, 369); // ac
+selectCodeEditor("Seg_7_Display.vhd", 74, 370); // ac
+// Elapsed time: 22 seconds
+selectCodeEditor("Seg_7_Display.vhd", 92, 356); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Seg_7_Display.vhd", 212, 300); // ac
+selectCodeEditor("Seg_7_Display.vhd", 250, 352); // ac
+selectCodeEditor("Seg_7_Display.vhd", 245, 310); // ac
+selectCodeEditor("Seg_7_Display.vhd", 252, 367); // ac
+// Elapsed time: 24 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Seg_7_Display.vhd", 171, 182); // ac
+typeControlKey((HResource) null, "Seg_7_Display.vhd", 'v'); // ac
+selectCodeEditor("Seg_7_Display.vhd", 4, 357); // ac
+// Elapsed time: 19 seconds
+selectCodeEditor("Seg_7_Display.vhd", 5, 177); // ac
+selectCodeEditor("Seg_7_Display.vhd", 250, 57); // ac
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, (String) null); // d.c
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // j
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("Seg_7_Display.vhd", 225, 95); // ac
+// Elapsed time: 17 seconds
+selectCodeEditor("Seg_7_Display.vhd", 183, 142); // ac
+selectCodeEditor("Seg_7_Display.vhd", 221, 147); // ac
+selectCodeEditor("Seg_7_Display.vhd", 200, 157); // ac
+selectCodeEditor("Seg_7_Display.vhd", 188, 173); // ac
+selectCodeEditor("Seg_7_Display.vhd", 224, 179); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Seg_7_Display.vhd", 450, 93); // ac
+// Elapsed time: 40 seconds
+selectCodeEditor("Seg_7_Display.vhd", 214, 95); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PS2Receiver.vhd", 0); // o
+// Elapsed time: 40 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constraints.xdc", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.vhd", 3); // o
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), keyboard : PS2Receiver(Behavioral) (PS2Receiver.vhd)]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), keyboard : PS2Receiver(Behavioral) (PS2Receiver.vhd), debounce_inst : debouncer(Behavioral) (debouncer.vhd)]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), keyboard : PS2Receiver(Behavioral) (PS2Receiver.vhd), debounce_inst : debouncer(Behavioral) (debouncer.vhd)]", 3, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Seg_7_Display.vhd", 1); // o
+selectCodeEditor("Seg_7_Display.vhd", 216, 336); // ac
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PS2Receiver.vhd", 0); // o
+// Elapsed time: 84 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Seg_7_Display.vhd", 1); // o
+// Elapsed time: 41 seconds
+selectCodeEditor("Seg_7_Display.vhd", 96, 163); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("Seg_7_Display.vhd", 3, 265); // ac
+// Elapsed time: 13 seconds
+selectCodeEditor("Seg_7_Display.vhd", 3, 265, false, false, false, true, false); // ac - Popup Trigger
+selectCodeEditor("Seg_7_Display.vhd", 128, 130); // ac
+selectCodeEditor("Seg_7_Display.vhd", 27, 334); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // u
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/synth_1/top.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 10 
+// Tcl Message: [Thu Apr 27 13:19:13 2023] Launched synth_1... Run output will be captured here: C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/synth_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// 'i' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 51 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// Elapsed time: 25 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 10 
+// Tcl Message: [Thu Apr 27 13:20:31 2023] Launched impl_1... Run output will be captured here: C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/impl_1/runme.log 
+// 'a' command handler elapsed time: 26 seconds
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 84 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'cw' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // cz
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 10 
+// Tcl Message: [Thu Apr 27 13:22:00 2023] Launched impl_1... Run output will be captured here: C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 55 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// Tcl Message: open_run impl_1 
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a
+// HMemoryUtils.trashcanNow. Engine heap size: 2,986 MB. GUI used memory: 73 MB. Current time: 4/27/23, 1:22:59 PM EDT
+// TclEventType: DESIGN_CLOSE
+// TclEventType: DESIGN_NEW_FAILED
+// [Engine Memory]: 3,115 MB (+243781kb) [01:28:47]
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a100tcsg324-1 INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3772.434 ; gain = 0.000 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.2 INFO: [Common 17-344] 'open_run' was cancelled 
+// CommandFailedException: ERROR: [Common 17-69] Command failed:  
+// 'dD' command handler elapsed time: 4 seconds
+dismissDialog("Open Implemented Design"); // bq
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // aP
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/johnn/Documents/.Documents/CPE487_Project/keyboard/keyboard/keyboard.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'D' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bq
+// Elapsed time: 12 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+// 'D' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // aP
+// Elapsed time: 56 seconds
+selectCodeEditor("Seg_7_Display.vhd", 214, 77); // ac
+// Elapsed time: 165 seconds
+selectCodeEditor("Seg_7_Display.vhd", 232, 415); // ac
+selectCodeEditor("Seg_7_Display.vhd", 121, 399); // ac
+selectCodeEditor("Seg_7_Display.vhd", 159, 396); // ac
+selectCodeEditor("Seg_7_Display.vhd", 189, 419); // ac
+selectCodeEditor("Seg_7_Display.vhd", 173, 419); // ac
+// Elapsed time: 50 seconds
+selectCodeEditor("Seg_7_Display.vhd", 217, 79); // ac
+// Elapsed time: 44 seconds
+selectCodeEditor("Seg_7_Display.vhd", 181, 399); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("Seg_7_Display.vhd", 200, 396); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectCodeEditor("Seg_7_Display.vhd", 207, 297); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag
+selectMenuItem(RDIResourceCommand.RDICommands_UNDO, "Undo"); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag
+selectMenuItem(RDIResourceCommand.RDICommands_REDO, "Redo"); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ag
+selectCodeEditor("Seg_7_Display.vhd", 212, 264); // ac
+selectCodeEditor("Seg_7_Display.vhd", 204, 301); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
