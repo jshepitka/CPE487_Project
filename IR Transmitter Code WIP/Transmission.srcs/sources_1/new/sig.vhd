@@ -63,9 +63,9 @@ begin
             
             else
                 if(irdata(i) = '1') then
-                    --wait 1ms not sure how to do that
+                    --wait 1ms not sure how to do that 38 cycles
                 else
-                    --wait 2ms
+                    --wait 2ms 76 cycles
                 cnt := 0;
                 ircontrol <= irdata(i);
                 i := i +1;
