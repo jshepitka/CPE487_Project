@@ -104,3 +104,4 @@ add_bb : bat_n_ball
 	blue => S_blue
 );
 ```
+![image](https://user-images.githubusercontent.com/37707211/235395046-c877a6c1-b8a1-491d-bbb0-c4ff0de4626e.png)
