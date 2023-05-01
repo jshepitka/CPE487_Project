@@ -39,18 +39,22 @@ entity clkDivider is
 end clkDivider;
 
 architecture Behavioral of clkDivider is
-    signal clkDiv : std_logic := '0';
+    
 begin
     process(clk)
-    variable cnt : integer range 50 to 0;
+    variable cnt : integer range 2047 to 0;
+    variable clkDiv : std_logic := '0';
     begin
         if rising_edge(clk) then
             cnt := cnt + 1;
-            if cnt = 50 then
+            if cnt = 1312 then
                 if clkDIV = '0' then
-                    Outclk <= '1';
+                    clkDIV := '1';
+                    Outclk <= clkDIV;
                 else
-                    Outclk <= '0';
+                    clkDiv := '0';
+                    Outclk <= clkDiv;
+                    
                 end if;
             cnt := 0;
             end if;
