@@ -76,5 +76,6 @@ begin
             CLK50MHZ <= not CLK50MHZ;
         end if;
     end process;
+    
 
 end Behavioral;

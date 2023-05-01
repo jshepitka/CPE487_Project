@@ -14,62 +14,79 @@ entity sig is
 end sig;
 
 architecture Behavioral of sig is
-    signal dataIN : std_logic_vector(31 downto 0);
-    signal irdata : std_logic_vector(31 downto 0);
+    signal dataIN : std_logic_vector(15 downto 0);
+    signal irdata : std_logic_vector(11 downto 0);
 begin
-    dataIN <= keycode;
-process
-    variable i : integer range 31 to 0 := 0;
-    variable cnt : integer range 38 to 0;
-    variable alternate : std_logic := '1';
-begin
-    case dataIN is
-        when "  " =>
-            irdata <=
-            i :=
-        when "  " =>
-            irdata <=
-            i :=
-        when "  " =>
-            irdata <=
-            i :=
-        when "  " =>
-            irdata <=
-            i :=
-        when "  " =>
-            irdata <=
-            i :=
-        when "  " =>
-        
+    dataIN <= keycode(15 downto 0);
+process(clk38KHz)
+    variable i : integer range 12 to 0 := 0;
+    variable mark : integer range 2 to 0 := 0; --wait counter  
+    variable count : integer range 304 to 0;
+begin -- signal starts with 1111 then 8 bits of data this is for tcl
+    if rising_edge(clk38KHZ) then
+    case dataIN(15 downto 0) is --cases are for  release keycodes (f0__) matched to the digits from sevenseg display code
+        when "1111000000101001" => --space bar
+            irdata <= "111100101010"; --power
+        when "1111000000011101" => --w
+            irdata <= "111100101111"; --volume up
+        when "1111000000011011" =>--s
+            irdata <= "111100101110"; --volume down
+--        when "  " =>
+--            irdata <= "1111
+--        when "  " =>
+--            irdata <= "1111
+--        when "  " =>
         when others =>
-            ircode <= "0";
+            irdata <= "000000000000";
     end case;
+
     --tcl uses 4ms on then 4ms off ("mark"), then 12 bit signal, first 4 are address bits (likely all 1s), then 8 bits for function (on, off, channel up, etc.)
     --each bit is on for 0.5ms, then if it is a 1 off for 1ms, if it is a 0 off for 2ms
     --on means "send 19 pulses at 38kHz" where the pulse is transmitted for half the time = actually 76khz clock?
     --ex. power on is '1111 00101010' (15 42 in decimal)
     --currently implements the 12 bits being sent but not the mark
-    if rising_edge(clk38KHZ) then
-        if irdata /= "0" then
-            if(cnt /= 38) then
-                if(cnt < 37) then  -- loop the 19 pulses every bit gets
-                    ircontrol <= alternate;
-                    alternate := not alternate;
-                    cnt := cnt + 1;
+    
+        if irdata /= 0 then
+            if mark = 0 then
+                ircontrol <= clk38KHz;
+                if count < 152 then
+                    count := count + 1;
                 else
-                    ircontrol <= '0';  --final loop turns signal off and resets counter
-                    cnt := 38;  --38 = already looped
+                    mark := 1;
+                    count := 0;    
                 end if;
-            
-            else
-                if(irdata(i) = '1') then
-                    --wait 1ms not sure how to do that 38 cycles
-                else
-                    --wait 2ms 76 cycles
-                cnt := 0;
-                ircontrol <= irdata(i);
-                i := i +1;
+            elsif mark = 1 then
+                ircontrol <= '0';
+                mark := 2;
             end if;
+            if i < 12 then
+                if irdata(i) = '1' then
+                    if count < 152 then
+                        ircontrol <= clk38KHz;
+                        count := count + 1;   
+                    elsif (count < 304) then
+                        ircontrol <= '0';
+                        count := count + 1;
+                    else
+                        i := i + 1;
+                        count := 0;
+                    end if;
+             else
+                    if count < 19 then
+                        ircontrol <= clk38KHz;
+                    elsif (count < 95) then
+                        ircontrol <= '0';
+                    else
+                        i := i +1;
+                        count := 0;
+                    end if;    
+                end if;
+           else
+                i := 0;
+                mark := 0;
+                irdata <= "000000000000";
+           end if;
         end if;
-    end if;
+      end if;
+end process;
 end Behavioral;
