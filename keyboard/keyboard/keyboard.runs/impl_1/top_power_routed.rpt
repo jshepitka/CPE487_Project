@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Thu Apr 27 13:37:08 2023
+| Date             : Mon May  1 12:44:42 2023
 | Host             : JOHNNY-LAPTOP running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 15.166 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 15.106 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 14.819                           |
-| Device Static (W)        | 0.347                            |
+| Dynamic (W)              | 14.762                           |
+| Device Static (W)        | 0.344                            |
 | Effective TJA (C/W)      | 4.6                              |
-| Max Ambient (C)          | 15.8                             |
-| Junction Temperature (C) | 94.2                             |
+| Max Ambient (C)          | 16.1                             |
+| Junction Temperature (C) | 93.9                             |
 | Confidence Level         | Low                              |
 | Setting File             | ---                              |
 | Simulation Activity File | ---                              |
@@ -59,10 +59,10 @@ Table of Contents
 |   BUFG         |     0.010 |        2 |        32 |            6.25 |
 |   F7/F8 Muxes  |     0.002 |        4 |     63400 |           <0.01 |
 |   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |     0.377 |      120 |       --- |             --- |
-| I/O            |    14.152 |       20 |       210 |            9.52 |
-| Static Power   |     0.347 |          |           |                 |
-| Total          |    15.166 |          |           |                 |
+| Signals        |     0.378 |      120 |       --- |             --- |
+| I/O            |    14.093 |       20 |       210 |            9.52 |
+| Static Power   |     0.344 |          |           |                 |
+| Total          |    15.106 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.891 |       0.679 |      0.212 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.562 |       0.518 |      0.044 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     4.006 |       4.002 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.891 |       0.680 |      0.210 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.560 |       0.516 |      0.044 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     3.990 |       3.986 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -139,10 +139,10 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| top               |    14.819 |
+| top               |    14.762 |
 |   keyboard        |     0.318 |
 |     debounce_inst |     0.105 |
-|   sevenSeg        |     0.262 |
+|   sevenSeg        |     0.264 |
 +-------------------+-----------+
 
 
