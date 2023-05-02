@@ -84,7 +84,7 @@ begin -- signal starts with 1111 then 8 bits of data this is for tcl
            else
                 i := 0;
                 mark := 0;
-                irdata <= "000000000000";
+                ircontrol <= clk38KHz;
            end if;
         end if;
       end if;

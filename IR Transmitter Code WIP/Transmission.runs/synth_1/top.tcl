@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/synth_1/top.tcl"
+  variable script "C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,28 +70,32 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param general.maxThreads 12
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.xpr} [current_project]
+set_property webtalk.parent_dir {C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/johnn/AppData/Roaming/Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.2 [current_project]
-set_property ip_output_repo {c:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.cache/ip} [current_project]
+set_property ip_output_repo {c:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  {C:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/sources_1/new/PS2Receiver.vhd}
-  {C:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/sources_1/new/clkDivider.vhd}
-  {C:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/sources_1/new/debouncer.vhd}
-  {C:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/sources_1/new/sig.vhd}
-  {C:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/sources_1/new/top.vhd}
+  {C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/sources_1/new/7segdisplay.vhd}
+  {C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/sources_1/new/PS2Receiver.vhd}
+  {C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/sources_1/new/clkDivider.vhd}
+  {C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/sources_1/new/debouncer.vhd}
+  {C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/sources_1/new/sig.vhd}
+  {C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/sources_1/new/top.vhd}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -102,10 +106,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/constrs_1/new/constraints.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/constrs_1/new/constraints.xdc}}]
+read_xdc {{C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/constrs_1/new/constraints.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/constrs_1/new/constraints.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental {C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/utils_1/imports/synth_1/top.dcp}
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

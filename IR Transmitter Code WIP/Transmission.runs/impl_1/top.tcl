@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/impl_1/top.tcl"
+  variable script "C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -123,9 +123,11 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 3
+  set_param general.maxThreads 12
+  set_param chipscope.maxJobs 4
+  set_param xicom.use_bs_reader 1
   open_checkpoint top_routed.dcp
-  set_property webtalk.parent_dir {C:/Users/johnn/Documents/.Documents/CPE487_Project/IR Transmitter Code WIP/Transmission.cache/wt} [current_project]
+  set_property webtalk.parent_dir {C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.cache/wt} [current_project]
 set_property TOP top [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
