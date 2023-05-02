@@ -16,12 +16,13 @@ end sig;
 architecture Behavioral of sig is
     signal dataIN : std_logic_vector(15 downto 0);
     signal irdata : std_logic_vector(11 downto 0);
+    shared  variable clk38 : std_logic;
 begin
     dataIN <= keycode(15 downto 0);
 process(clk38KHz)
     variable i : integer range 12 to 0 := 0;
     variable mark : integer range 2 to 0 := 0; --wait counter  
-    variable count : integer range 304 to 0;
+    variable count : integer range 304 to 0 := 0;
 begin -- signal starts with 1111 then 8 bits of data this is for tcl
     if rising_edge(clk38KHZ) then
     case dataIN(15 downto 0) is --cases are for  release keycodes (f0__) matched to the digits from sevenseg display code
@@ -39,13 +40,11 @@ begin -- signal starts with 1111 then 8 bits of data this is for tcl
         when others =>
             irdata <= "000000000000";
     end case;
-
     --tcl uses 4ms on then 4ms off ("mark"), then 12 bit signal, first 4 are address bits (likely all 1s), then 8 bits for function (on, off, channel up, etc.)
     --each bit is on for 0.5ms, then if it is a 1 off for 1ms, if it is a 0 off for 2ms
     --on means "send 19 pulses at 38kHz" where the pulse is transmitted for half the time = actually 76khz clock?
     --ex. power on is '1111 00101010' (15 42 in decimal)
-    --currently implements the 12 bits being sent but not the mark
-    
+    --currently implements the 12 bits being sent but not the mark    
         if irdata /= 0 then
             if mark = 0 then
                 ircontrol <= clk38KHz;
@@ -87,6 +86,7 @@ begin -- signal starts with 1111 then 8 bits of data this is for tcl
                 ircontrol <= clk38KHz;
            end if;
         end if;
-      end if;
-end process;
+    end if;
+end process;      
+
 end Behavioral;

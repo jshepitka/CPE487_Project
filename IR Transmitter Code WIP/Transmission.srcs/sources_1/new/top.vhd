@@ -23,6 +23,8 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use STD.textio.all;
 use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -49,12 +51,14 @@ end top;
 architecture Behavioral of top is
     signal CLK50MHZ : std_logic := '0';
     
-    signal clk38KHZ : std_logic := '0';
+    signal clk38KHZ : std_logic;
     signal keycode  : std_logic_vector(31 downto 0);
     
     --test files
     file testInputs : text;
     file results : text;
+    signal testOut : std_logic;
+
 begin
 
     tclk : entity work.clkDivider
@@ -74,7 +78,7 @@ begin
     transmissionSignal : entity work.sig
     port map (
         keycode     => keycode,
-        ircontrol   => IR_CONTROL,
+        ircontrol   => IR_CONTROL, --for testing, using testOut signal instead of IR_CONTROL port (JA[1])
         clk38KHZ    => clk38KHZ,
         clk         => CLK100MHZ
     );
@@ -95,25 +99,27 @@ begin
             CLK50MHZ <= not CLK50MHZ;
         end if;
     end process;
-    
-p1: process is --test process.
-    variable ILine, Oline : Line;
-    variable testBit : bit;
-    variable keycode_in: std_logic_vector(15 downto 0);
-    variable f_out: std_logic_vector(11 downto 0); --dont know if this is right
-begin
-    file_open(testInputs, "C:/Users/johnn/Documents/.ActuallyDocuments/cpe487CPE487_Project/projectTestFiles/testInputs.txt", READ_MODE);
-    file_open(results, "C:/Users/johnn/Documents/.ActuallyDocuments/cpe487CPE487_Project/projectTestFiles/results.txt", WRITE_MODE);
-    while not endfile(testInputs) loop
-        readLine(testInputs, ILine);
-        read(ILine, testBit);
-        keycode <= keycode_in;
-    wait for 60 NS;
-        f_out := IR_CONTROL;
-        write(OLine, f_out);
-        writeline(results, OLine);
-    end loop;
-       file_close(testInputs);
-       file_close(results);
-end process p1;
+   
+ 
+--p1: process --test process.
+--    variable ILine, Oline : Line;
+--    variable testData : bit_vector;
+--    variable keycode_in: std_logic_vector(15 downto 0);
+--    variable f_out: std_logic; --dont know if this is right
+
+----    file inputFile  :   text open read_mode is "C:/Users/johnn/Documents/.ActuallyDocuments/cpe487CPE487_Project/projectTestFiles/testInputs.txt";
+----    file resultFile :   text open write_mode is "C:/Users/johnn/Documents/.ActuallyDocuments/cpe487CPE487_Project/projectTestFiles/results.txt";
+--begin
+--    file_open(testInputs, "C:/Users/johnn/Documents/.ActuallyDocuments/cpe487CPE487_Project/projectTestFiles/testInputs.txt", READ_MODE);
+----    file_open(results, "C:/Users/johnn/Documents/.ActuallyDocuments/cpe487CPE487_Project/projectTestFiles/results.txt", WRITE_MODE);
+--    while not endfile(testInputs) loop
+--        readLine(testInputs, ILine);
+--        read(ILine, testData);
+--        keycode_in := to_stdlogicvector(testData);
+--        keycode <= keycode_in;
+--    wait for 60 NS;
+--    end loop;
+--       file_close(testInputs);
+----       file_close(results);
+--end process p1;
 end Behavioral;

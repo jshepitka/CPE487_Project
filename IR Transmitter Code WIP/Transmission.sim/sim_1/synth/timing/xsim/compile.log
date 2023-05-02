@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.sim/sim_1/synth/timing/xsim/top_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PS2Receiver
+INFO: [VRFC 10-311] analyzing module debouncer
+INFO: [VRFC 10-311] analyzing module seg7decimal
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-311] analyzing module glbl
