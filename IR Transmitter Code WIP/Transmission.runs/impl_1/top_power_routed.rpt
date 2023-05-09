@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Tue May  9 13:16:34 2023
+| Date             : Tue May  9 13:35:55 2023
 | Host             : DESKTOP-8NLSLVH running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 22.327 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 22.292 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 21.530                           |
+| Dynamic (W)              | 21.495                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.398 |      214 |       --- |             --- |
-|   LUT as Logic |     0.346 |       68 |     63400 |            0.11 |
-|   Register     |     0.030 |      108 |    126800 |            0.09 |
+| Slice Logic    |     0.395 |      200 |       --- |             --- |
+|   LUT as Logic |     0.344 |       61 |     63400 |            0.10 |
+|   Register     |     0.030 |      103 |    126800 |            0.08 |
 |   CARRY4       |     0.010 |        5 |     15850 |            0.03 |
 |   BUFG         |     0.010 |        2 |        32 |            6.25 |
 |   F7/F8 Muxes  |     0.002 |        4 |     63400 |           <0.01 |
-|   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |     0.481 |      146 |       --- |             --- |
+|   Others       |     0.000 |        8 |       --- |             --- |
+| Signals        |     0.448 |      139 |       --- |             --- |
 | I/O            |    20.651 |       24 |       210 |           11.43 |
 | Static Power   |     0.797 |          |           |                 |
-| Total          |    22.327 |          |           |                 |
+| Total          |    22.292 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     1.454 |       0.891 |      0.563 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     1.418 |       0.856 |      0.563 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.849 |       0.756 |      0.093 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     5.846 |       5.842 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -139,10 +139,10 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| top               |    21.530 |
-|   keyboard        |     0.336 |
-|     debounce_inst |     0.116 |
-|   sevenSeg        |     0.264 |
+| top               |    21.495 |
+|   keyboard        |     0.326 |
+|     debounce_inst |     0.122 |
+|   sevenSeg        |     0.266 |
 +-------------------+-----------+
 
 

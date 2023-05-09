@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue May  9 13:16:33 2023
+| Date         : Tue May  9 13:35:54 2023
 | Host         : DESKTOP-8NLSLVH running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 108
+             Violations found: 103
 +-----------+------------------+-----------------------------+------------+
 | Rule      | Severity         | Description                 | Violations |
 +-----------+------------------+-----------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell | 108        |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell | 103        |
 +-----------+------------------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -545,31 +545,6 @@ Related violations: <none>
 TIMING-17#103 Critical Warning
 Non-clocked sequential cell  
 The clock pin sevenSeg/seg_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#104 Critical Warning
-Non-clocked sequential cell  
-The clock pin transmissionSignal/ircontrol_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#105 Critical Warning
-Non-clocked sequential cell  
-The clock pin transmissionSignal/irdata_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#106 Critical Warning
-Non-clocked sequential cell  
-The clock pin transmissionSignal/irdata_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#107 Critical Warning
-Non-clocked sequential cell  
-The clock pin transmissionSignal/irdata_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#108 Critical Warning
-Non-clocked sequential cell  
-The clock pin transmissionSignal/irdata_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue May  9 13:15:54 2023
+| Date         : Tue May  9 13:35:01 2023
 | Host         : DESKTOP-8NLSLVH running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    13 |
-|    Minimum number of control sets                        |    13 |
+| Total control sets                                       |    11 |
+|    Minimum number of control sets                        |    11 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    68 |
+| Unused register locations in slices containing registers |    57 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,9 +39,9 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    13 |
-| >= 0 to < 4        |     5 |
-| >= 4 to < 6        |     4 |
+| Total control sets |    11 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     3 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     1 |
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              47 |           17 |
+| No           | No                    | No                     |              47 |           19 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              15 |            3 |
-| Yes          | No                    | No                     |              37 |           11 |
+| No           | Yes                   | No                     |              11 |            3 |
+| Yes          | No                    | No                     |              36 |           10 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               9 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -73,19 +73,17 @@ Table of Contents
 +----------------------------+----------------------------------------+------------------------------------+------------------+----------------+--------------+
 |        Clock Signal        |              Enable Signal             |          Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------------------+----------------------------------------+------------------------------------+------------------+----------------+--------------+
-|  clkout38k_OBUF            | transmissionSignal/neqOp__0            |                                    |                1 |              1 |         1.00 |
+|  clkout50m_OBUF            | keyboard/debounce_inst/O1_i_1_n_0      |                                    |                1 |              1 |         1.00 |
 |  clkout50m_OBUF            | keyboard/debounce_inst/Iv1_i_1_n_0     |                                    |                1 |              1 |         1.00 |
 |  clkout50m_OBUF            | keyboard/debounce_inst/O0_i_1_n_0      |                                    |                1 |              1 |         1.00 |
-|  clkout50m_OBUF            | keyboard/debounce_inst/O1_i_1_n_0      |                                    |                1 |              1 |         1.00 |
 |  clkout50m_OBUF            | keyboard/debounce_inst/clear           |                                    |                1 |              1 |         1.00 |
 | ~keyboard/debounce_inst/O0 | keyboard/cnt                           | keyboard/cnt[3]_i_1__0_n_0         |                1 |              4 |         4.00 |
-|  clkout38k_OBUF            |                                        | keyboard/keycode_reg[15]_0         |                1 |              4 |         4.00 |
 |  clkout50m_OBUF            |                                        |                                    |                2 |              5 |         2.50 |
 |  clkout50m_OBUF            | keyboard/debounce_inst/cnt1[4]_i_1_n_0 | keyboard/debounce_inst/Iv1_i_1_n_0 |                1 |              5 |         5.00 |
 | ~keyboard/debounce_inst/O0 |                                        |                                    |                4 |              9 |         2.25 |
-|  clkoutput_OBUF_BUFG       |                                        | cnt[10]_i_1_n_0                    |                2 |             11 |         5.50 |
+|  clkoutput_OBUF_BUFG       |                                        | cnt[10]_i_1_n_0                    |                3 |             11 |         3.67 |
 |  flag_BUFG                 | keyboard/keycode[31]_i_1_n_0           |                                    |                6 |             32 |         5.33 |
-|  clkoutput_OBUF_BUFG       |                                        |                                    |               11 |             33 |         3.00 |
+|  clkoutput_OBUF_BUFG       |                                        |                                    |               13 |             33 |         2.54 |
 +----------------------------+----------------------------------------+------------------------------------+------------------+----------------+--------------+
 
 

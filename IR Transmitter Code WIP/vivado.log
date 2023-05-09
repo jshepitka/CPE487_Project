@@ -339,3 +339,17 @@ program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Program Files/MSYS2/home/croco/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/utils_1/imports/synth_1/top.dcp with file C:/Program Files/MSYS2/home/croco/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Tue May  9 13:33:29 2023] Launched synth_1...
+Run output will be captured here: C:/Program Files/MSYS2/home/croco/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/synth_1/runme.log
+[Tue May  9 13:33:29 2023] Launched impl_1...
+Run output will be captured here: C:/Program Files/MSYS2/home/croco/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Program Files/MSYS2/home/croco/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.

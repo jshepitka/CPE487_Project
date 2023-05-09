@@ -1584,3 +1584,100 @@ selectCodeEditor("top.vhd", 658, 380); // ac
 // HMemoryUtils.trashcanNow. Engine heap size: 4,376 MB. GUI used memory: 117 MB. Current time: 5/9/23, 1:22:16 PM EDT
 // Elapsed time: 632 seconds
 selectCodeEditor("top.vhd", 531, 294); // ac
+// Elapsed time: 96 seconds
+selectCodeEditor("top.vhd", 1158, 367, false, false, false, true, false); // ac - Popup Trigger
+selectCodeEditor("top.vhd", 775, 406); // ac
+// Elapsed time: 119 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sig.vhd", 0); // o
+// Elapsed time: 13 seconds
+selectCodeEditor("sig.vhd", 275, 659, false, false, false, true, false); // ac - Popup Trigger
+selectCodeEditor("sig.vhd", 12, 360); // ac
+selectCodeEditor("sig.vhd", 301, 651); // ac
+// Elapsed time: 18 seconds
+selectCodeEditor("sig.vhd", 1281, 438); // ac
+typeControlKey((HResource) null, "sig.vhd", 'v'); // ac
+selectCodeEditor("sig.vhd", 258, 585); // ac
+selectCodeEditor("sig.vhd", 330, 313); // ac
+// Elapsed time: 15 seconds
+typeControlKey((HResource) null, "sig.vhd", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 30, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Program Files/MSYS2/home/croco/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/utils_1/imports/synth_1/top.dcp with file C:/Program Files/MSYS2/home/croco/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/synth_1/top.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // cz
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: [Tue May  9 13:33:29 2023] Launched synth_1... Run output will be captured here: C:/Program Files/MSYS2/home/croco/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/synth_1/runme.log [Tue May  9 13:33:29 2023] Launched impl_1... Run output will be captured here: C:/Program Files/MSYS2/home/croco/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 24 seconds
+selectCodeEditor("sig.vhd", 936, 658); // ac
+selectCodeEditor("sig.vhd", 654, 322); // ac
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 191 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // S.a
+selectCodeEditor("sig.vhd", 778, 580); // ac
+// Elapsed time: 97 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // aP
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Program Files/MSYS2/home/croco/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'D' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bq
+// Elapsed time: 89 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constraints.xdc", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sig.vhd", 0); // o
+selectCodeEditor("sig.vhd", 362, 462); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.vhd", 2); // o
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constraints.xdc", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.vhd", 2); // o
+selectCodeEditor("top.vhd", 548, 273); // ac
+selectCodeEditor("top.vhd", 531, 325); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sig.vhd", 0); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.vhd", 2); // o
+// Elapsed time: 12 seconds
+selectCodeEditor("top.vhd", 294, 429); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constraints.xdc", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.vhd", 2); // o
+// HMemoryUtils.trashcanNow. Engine heap size: 4,376 MB. GUI used memory: 117 MB. Current time: 5/9/23, 1:52:16 PM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  22403 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  51643 ms.
