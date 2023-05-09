@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/synth_1'
+HD_PWD='C:/Program Files/MSYS2/home/croco/CPE487_Project/IR Transmitter Code WIP/Transmission.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -27,7 +27,7 @@ begin -- signal starts with 1111 then 8 bits of data this is for tcl
     if rising_edge(clk38KHZ) then
     case dataIN(15 downto 0) is --cases are for  release keycodes (f0__) matched to the digits from sevenseg display code
         when "1111000000101001" => --space bar
-            irdata <= "111100101010"; --power
+            irdata <= "111101000110"; --power 111101000110 111100101010
         when "1111000000011101" => --w
             irdata <= "111100101111"; --volume up
         when "1111000000011011" =>--s

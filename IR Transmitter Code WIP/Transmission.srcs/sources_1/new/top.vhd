@@ -40,6 +40,9 @@ entity top is
     PS2_CLK   : in std_logic;
     PS2_DATA  : in std_logic;
     IR_CONTROL: out std_logic;  --ir led control signal
+    clkoutput : out std_logic;
+    clkout50m : out std_logic;
+    clkout38k : out std_logic;
     
     SEG       : out std_logic_vector(6 downto 0);
     AN        : out std_logic_vector(7 downto 0);
@@ -50,22 +53,36 @@ end top;
 
 architecture Behavioral of top is
     signal CLK50MHZ : std_logic := '0';
-    
-    signal clk38KHZ : std_logic;
+    signal clk38KHZ : std_logic := '1';
     signal keycode  : std_logic_vector(31 downto 0);
-    
+    signal cnt : unsigned(10 downto 0);
     --test files
     file testInputs : text;
     file results : text;
     signal testOut : std_logic;
 
 begin
-
-    tclk : entity work.clkDivider
-    port map (
-        clk     =>  CLK100MHZ,
-        Outclk  =>  clk38KHZ
-    );
+    clkoutput <= CLK100MHZ;
+    clkout50m <= CLK50MHZ;
+  --  clkout38k <= clk38KHZ;
+    clkout38k <= clk38KHz;
+    
+    process
+    begin
+        wait until rising_edge(CLK100MHZ); 
+               cnt <= cnt + "1";
+--            cnt := cnt + 1;
+            if cnt = 1312 then
+                clk38kHz <= not clk38kHz; --not clk38KHz;             
+                 cnt <= "00000000000";
+           end if;
+end process;
+    
+--    tclk : entity work.clkDivider
+--    port map (
+--        clk     =>  CLK100MHZ,
+--        Outclk  =>  clk38KHZ--clkoutput--clk38KHZ
+--    );
     
     keyboard : entity work.PS2Receiver
     port map(
