@@ -13,7 +13,7 @@ entity seg7decimal is
     );
 end entity;
 
-architecture Behavioral of seg7decimal is
+   architecture Behavioral of seg7decimal is
 
     signal s    : std_logic_vector(2 downto 0); --dig equivalent
     signal aen  : std_logic_vector(7 downto 0);
