@@ -40,17 +40,17 @@ end clkDivider;
 
 architecture Behavioral of clkDivider is
 begin
-    process(clk)
-    variable cnt : integer range 2047 to 0;
-    variable clk38KHz : std_logic := '0';
-    begin
-        if rising_edge(clk) then
-            cnt := cnt + 1;
-            if cnt = 1312 then
-                clk38KHz := not clk38KHz;
-                Outclk <= clk38KHz;          
-                cnt := 0;
-            end if;
-        end if;
-end process;
+--    process(clk)
+--    variable cnt : integer range 2047 to 0;
+--    variable clk38KHz : std_logic := '0';
+--    begin
+ --       if rising_edge(clk) then
+   --         cnt := cnt + 1;
+     --       if cnt = 1312 then
+       --         clk38KHz := not clk38KHz;
+         --       Outclk <= clk38KHz;          
+           --     cnt := 0;
+        --    end if;
+      --  end if;
+--end process;
 end Behavioral;
