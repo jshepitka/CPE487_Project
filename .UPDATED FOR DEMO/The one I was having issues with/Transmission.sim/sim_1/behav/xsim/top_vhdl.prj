@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Transmission.srcs/sources_1/new/7segdisplay.vhd" \
+"../../../../Transmission.srcs/sources_1/new/PS2Receiver.vhd" \
+"../../../../Transmission.srcs/sources_1/new/PWM.vhd" \
+"../../../../Transmission.srcs/sources_1/new/debouncer.vhd" \
+"../../../../Transmission.srcs/sources_1/new/signalmapper.vhd" \
+"../../../../Transmission.srcs/sources_1/new/top.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,94 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue May  2 00:04:51 2023
+# Process ID: 12508
+# Current directory: C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent33772 C:\Users\johnn\Documents\.ActuallyDocuments\cpe487\CPE487_Project\IR Transmitter Code WIP\Transmission.xpr
+# Log file: C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/vivado.log
+# Journal file: C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP\vivado.jou
+# Running On: Johnny-Desktop, OS: Windows, CPU Frequency: 3893 MHz, CPU Physical cores: 16, Host memory: 34279 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.xpr}
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+launch_simulation
+launch_simulation
+source top.tcl
+run all
+run all
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+add_force {/top/clk38KHZ} -radix hex {0 0ns}
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run all
+run all
+run all
+run all
+run all
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+close_sim
+launch_simulation
+source top.tcl
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+export_ip_user_files -of_objects  [get_files {{C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/constrs_1/new/constraints.xdc}}] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 {{C:/Users/johnn/Documents/.ActuallyDocuments/cpe487/CPE487_Project/IR Transmitter Code WIP/Transmission.srcs/constrs_1/new/constraints.xdc}}
+close_sim
